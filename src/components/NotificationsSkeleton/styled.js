@@ -22,22 +22,29 @@ const StyledHeading = styled.div`
 
   & h1 {
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     & span {
       display: inline-block;
-      font-size: inherit;
+      font-size: 1rem;
       color: white;
-      padding: 0.5rem;
+      padding: 0.4rem 0.8rem;
       background-color: var(--Blue);
-      border-radius: 30%;
+      border-radius: 5px;
     }
   }
+  
 `;
 
-const StyledNotifsList = styled.ul`
-
+const StyledMarkAllButton = styled.button`
+  border: none;
+  font-size: 1.2rem;
+  cursor: ${({active})=> active? "pointer" : "default"};
+  background-color: transparent;
+  color: ${({active})=> active? "#1e2f5f" : "var(---darkGreyishBlue)"};
 `;
 
 
-
-export {StyledContainer, StyledHeading, StyledNotifsList}
+export {StyledContainer, StyledHeading, StyledMarkAllButton}

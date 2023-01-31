@@ -1,5 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 
+import Mark from "./images/avatar-mark-webber.webp";
+import Angela from "./images/avatar-angela-gray.webp";
+import Jacob from "./images/avatar-jacob-thompson.webp";
+import Rizky from "./images/avatar-rizky-hasanuddin.webp";
+
+import Kimberly from "./images/avatar-kimberly-smith.webp";
+import Nathan from"./images/avatar-nathan-peterson.webp";
+import Anna from "./images/avatar-anna-kim.webp";
+
 const notifications = [ 
   {
     id: uuidv4(),
@@ -7,6 +16,7 @@ const notifications = [
     isRead: false, 
     initiator: {
       name: "Mark Webbar",
+      avatar: Mark,
       href: "#"
     },
     notifMessage: "reacted to your recent post",
@@ -22,6 +32,7 @@ const notifications = [
     isRead: false,
     initiator: {
       name: "Angela Gray",
+      avatar: Angela,
       href: "#"
     },
     notifMessage: "followed you",
@@ -32,6 +43,7 @@ const notifications = [
     isRead: false,
     initiator: {
       name: "Jacob Thompson",
+      avatar: Jacob,
       href: "#"
     },
     notifMessage: "has joined your group",
@@ -47,6 +59,7 @@ const notifications = [
     isRead: true,
     initiator: {
       name: "Rizky Hasanuddin",
+      avatar: Rizky,
       href: "#"
     },
     notifMessage: "sent you a private message",
@@ -62,6 +75,7 @@ const notifications = [
     isRead: true,
     initiator: {
       name: "Kimberly Smith",
+      avatar: Kimberly,
       href: "#"
     },
     notifMessage: "commented on your picture",
@@ -77,6 +91,7 @@ const notifications = [
     isRead: true,
     initiator: {
       name: "Nathan Peterson",
+      avatar: Nathan,
       href: "#"
     },
     notifMessage: "reacted to your recent post",
@@ -92,6 +107,7 @@ const notifications = [
     isRead: true,
     initiator: {
       name: "Anna Kim",
+      avatar: Anna,
       href: "#"
     },
     notifMessage: "left the group",
