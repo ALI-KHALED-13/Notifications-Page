@@ -27,6 +27,7 @@ const NotificationsSkeleton =()=>{
   }
   return (
     <StyledContainer>
+      
       <StyledHeading>
          <h1>Notifications {newNotifsCount > 0 && <span>{newNotifsCount}</span>}</h1>
          <StyledMarkAllButton
@@ -36,6 +37,7 @@ const NotificationsSkeleton =()=>{
             Mark all as read
           </StyledMarkAllButton>
       </StyledHeading>
+      
       <StyledNotificationsContainer>
         {notifs.map(notifObject=> {
             return (
@@ -47,6 +49,7 @@ const NotificationsSkeleton =()=>{
             )
         })}
       </StyledNotificationsContainer>
+      
     </StyledContainer>
   );
 }

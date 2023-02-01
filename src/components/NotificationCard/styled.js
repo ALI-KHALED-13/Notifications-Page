@@ -61,14 +61,17 @@ const StyledContentLink = styled.a`
 
 const StyledContentImage = styled(StyledAvatar)`
   border-radius: 5px;
-  margin-left: auto;
 `;
 
 const StyledContentMessage = styled.p`
   border: 1px solid var(--lightGreyishBlue1);
+  border-radius: 5px;
   padding: 1.5rem;
   font-size: 1.3rem;
   color: var(--darkGreyishBlue);
+  &:hover {
+    background-color: var(--lightGreyishBlue2);
+  }
 `;
 
 

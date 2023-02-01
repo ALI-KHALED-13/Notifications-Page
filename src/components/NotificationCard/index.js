@@ -46,8 +46,8 @@ const NotificationCard =({notifObject, setOneNotifAsRead})=> {
             generateContentBlock(notifObject.content)
           )}
 
-          {notifObject.isRead === false && <StyledRedDot />}
-          <br />
+          {notifObject.isRead === false && <StyledRedDot />} <br />
+          
           <span
             style={{fontSize: "1.2rem", color: "var(--greyishBlue)"}}
           >
@@ -57,7 +57,10 @@ const NotificationCard =({notifObject, setOneNotifAsRead})=> {
         </p>
         
         {notifObject.content?.layout === "block" && (
-            generateContentBlock(notifObject.content)
+          // eslint-disable-next-line
+          <a href="#" style={{marginLeft: "auto"}}>
+            {generateContentBlock(notifObject.content)}
+          </a>
         )}
       </StyledNotificationBody>
     

@@ -13,7 +13,7 @@ import chess from "./images/image-chess.webp";
 const notifications = [ 
   {
     id: uuidv4(),
-    date: new Date() - (1*60*1000), //1 minute agom supposing the backend api will sort them for us.
+    date: new Date() - (1*60*1000), //1 minute ago, supposing the backend api will sort them for us.
     isRead: false, 
     initiator: {
       name: "Mark Webbar",
