@@ -2,7 +2,7 @@
   "name": "notifications-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ali-khaled-13.github.io/Notification-Page/",
+  "homepage": "https://ali-khaled-13.github.io/Notifications-Page/",
   "dependencies": {
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
