@@ -19,6 +19,7 @@ export default createGlobalStyle`
     --Red: hsl(1, 90%, 64%);
     --Blue: hsl(219, 85%, 26%);
     --darkBlue: hsl(224, 21%, 14%);
+    --veryLightGrayishBlue: hsl(210, 60%, 98%);
     --lightGreyishBlue1: hsl(211, 68%, 94%);
     --lightGreyishBlue2: hsl(205, 33%, 90%);
     --greyishBlue: hsl(219, 14%, 63%);
@@ -36,6 +37,10 @@ export default createGlobalStyle`
     place-items: center;
     min-height: 100vh;
   }
-  .attribution { font-size: 1.1rem; text-align: center; }
+  .attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
   .attribution a { color: hsl(228, 45%, 44%); }
 `;

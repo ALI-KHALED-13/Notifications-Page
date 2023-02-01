@@ -9,6 +9,7 @@ const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  box-shadow: 1px 1px 5px var(--lightGreyishBlue1);
   @media only screen and (min-width: 375px) {
     padding: 2rem;
     border-radius: 8px;
@@ -45,7 +46,10 @@ const StyledMarkAllButton = styled.button`
   font-size: 1.2rem;
   cursor: ${({active})=> active? "pointer" : "default"};
   background-color: transparent;
-  color: ${({active})=> active? "var(--Blue)" : "var(--darkGreyishBlue)"};
+  color: var(--darkGreyishBlue);
+  &:hover {
+    color: var(--Blue);
+  }
 `;
 
 const StyledNotificationsContainer = styled.div`

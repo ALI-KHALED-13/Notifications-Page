@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 const StyledCard = styled.div`
   padding: 1.4rem;
-  background-color: ${({isRead})=> isRead? "initial": "var(--lightGreyishBlue1)" };
+  background-color: ${({isRead})=> isRead? "initial": "var(--veryLightGrayishBlue)" };
   border-radius: 5px;
   display: flex;
   gap: 1.5rem;
@@ -47,20 +47,23 @@ const StyledProfileLink = styled.a`
   }
 `;
 const StyledContentLink = styled.a`
-  font-weight: 500;
+  font-weight: 800;
   margin-left: 0.4rem;
 
   &:link, &:visited {
-    color: var(--darkBlue);
+    color: var(--darkGreyishBlue);
   }
   &:hover {
     color: var(--Blue);
-    font-weight: 800;
+    
   }
 `;
 
 const StyledContentImage = styled(StyledAvatar)`
   border-radius: 5px;
+  &:hover {
+    outline: 3px solid var(--lightGreyishBlue1);
+  }
 `;
 
 const StyledContentMessage = styled.p`
@@ -70,7 +73,7 @@ const StyledContentMessage = styled.p`
   font-size: 1.3rem;
   color: var(--darkGreyishBlue);
   &:hover {
-    background-color: var(--lightGreyishBlue2);
+    background-color: var(--lightGreyishBlue1);
   }
 `;
 
