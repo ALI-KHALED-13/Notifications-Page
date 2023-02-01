@@ -2,7 +2,12 @@
 import { useState } from "react";
 import notifications from "../../store";
 
-import { StyledContainer, StyledHeading, StyledMarkAllButton} from "./styled";
+import {
+  StyledContainer,
+  StyledHeading,
+  StyledMarkAllButton,
+  StyledNotificationsContainer
+} from "./styled";
 import NotificationCard from "../NotificationCard";
 
 const NotificationsSkeleton =()=>{
@@ -31,7 +36,7 @@ const NotificationsSkeleton =()=>{
             Mark all as read
           </StyledMarkAllButton>
       </StyledHeading>
-      <div>
+      <StyledNotificationsContainer>
         {notifs.map(notifObject=> {
             return (
               <NotificationCard
@@ -41,7 +46,7 @@ const NotificationsSkeleton =()=>{
               />
             )
         })}
-      </div>
+      </StyledNotificationsContainer>
     </StyledContainer>
   );
 }

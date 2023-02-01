@@ -8,6 +8,7 @@ import Rizky from "./images/avatar-rizky-hasanuddin.webp";
 import Kimberly from "./images/avatar-kimberly-smith.webp";
 import Nathan from"./images/avatar-nathan-peterson.webp";
 import Anna from "./images/avatar-anna-kim.webp";
+import chess from "./images/image-chess.webp";
 
 const notifications = [ 
   {
@@ -21,8 +22,9 @@ const notifications = [
     },
     notifMessage: "reacted to your recent post",
     content: {
+      layout: "inline",
       type: "link",
-      text: "My first tournament today!",
+      children: "My first tournament today!",
       href: "#"
     }
   },
@@ -48,8 +50,9 @@ const notifications = [
     },
     notifMessage: "has joined your group",
     content: {
+      layout: "inline",
       type: "link",
-      text: "Chess Club",
+      children: "Chess Club",
       href: "#"
     }
   },
@@ -64,8 +67,9 @@ const notifications = [
     },
     notifMessage: "sent you a private message",
     content: {
+      layout: "block",
       type: "message",
-      text: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+      children: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
       href: "#"
     }
   },
@@ -80,9 +84,9 @@ const notifications = [
     },
     notifMessage: "commented on your picture",
     content: {
+      layout: "block",
       type: "image",
-      text: "",
-      href: "./assets/image-chess.webp"
+      src: chess
     }
   },
   {
@@ -96,8 +100,9 @@ const notifications = [
     },
     notifMessage: "reacted to your recent post",
     content: {
+      layout: "inline",
       type: "link",
-      text: "5 end-game strategies to increase your win rate",
+      children: "5 end-game strategies to increase your win rate",
       href: "#"
     }
   },
@@ -112,8 +117,9 @@ const notifications = [
     },
     notifMessage: "left the group",
     content: {
+      layout: "inline",
       type: "link",
-      text: "Chess Club",
+      children: "Chess Club",
       href: "#"
     }
   }

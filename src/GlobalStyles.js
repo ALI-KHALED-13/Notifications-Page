@@ -24,6 +24,11 @@ export default createGlobalStyle`
     --greyishBlue: hsl(219, 14%, 63%);
     --darkGreyishBlue: hsl(219, 12%, 42%);
   }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
   .container {
     background-color: #f9fafe;

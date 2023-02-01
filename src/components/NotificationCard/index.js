@@ -2,48 +2,67 @@ import {
   StyledCard,
   StyledProfileLink,
   StyledContentLink,
-  StyledEmbeddedMessage,
+  StyledContentMessage,
+  StyledContentImage,
   StyledRedDot,
-  StyledAvatar
+  StyledAvatar,
+  StyledNotificationBody
 } from './styled';
 
+import { convertToPeriod } from './utils';
 
 const NotificationCard =({notifObject, setOneNotifAsRead})=> {
 
-const contentType = notifObject.content?.type;
+  const generateContentBlock =(contentConfig)=> {
+    const components = {
+      "link": StyledContentLink,
+      "image": StyledContentImage,
+      "message": StyledContentMessage
+    }
+    const Comp = components[contentConfig.type];
+    return <Comp {...contentConfig}/>
+  }
 
-return (
-  <StyledCard onClick={setOneNotifAsRead} isRead={notifObject.isRead}>
-    <StyledAvatar
-      src={notifObject.initiator.avatar}
-      alt="profile picture"
-    />
-    <div>
-      <p>
-        <StyledProfileLink href={notifObject.initiator.href}>
-          {notifObject.initiator.name}
-        </StyledProfileLink>
-        {notifObject.notifMessage}
+  return (
+    <StyledCard
+      onClick={()=> setOneNotifAsRead(notifObject.id)}
+      isRead={notifObject.isRead}
+    >
+      <StyledAvatar
+        src={notifObject.initiator.avatar}
+        alt="profile picture"
+      />
+      <StyledNotificationBody content={notifObject.content}>
+        <p
+          style={{fontSize: "1.4rem", color: "var(--darkGreyishBlue)"}}
+        >
+          <StyledProfileLink href={notifObject.initiator.href}>
+            {notifObject.initiator.name}
+          </StyledProfileLink>
 
-        {contentType === "link" && (
-          <StyledContentLink href={notifObject.content.href}>
-            {notifObject.content.text}
-          </StyledContentLink>
-        )}
-        {notifObject.isRead === false && <StyledRedDot />}
-      </p>
-      <span>
-        {new Date(notifObject.date).toDateString()}
-      </span>
-      {/*["image", "message"].includes(contentType) && (
-        contentType === "message"?
+          {notifObject.notifMessage}
+
+          {notifObject.content?.layout === "inline" && (
+            generateContentBlock(notifObject.content)
+          )}
+
+          {notifObject.isRead === false && <StyledRedDot />}
+          <br />
+          <span
+            style={{fontSize: "1.2rem", color: "var(--greyishBlue)"}}
+          >
+            {convertToPeriod(notifObject.date)} ago
+          </span>
+
+        </p>
         
-        :
-
-      )*/}
-    </div>
-  </StyledCard>
-);
+        {notifObject.content?.layout === "block" && (
+            generateContentBlock(notifObject.content)
+        )}
+      </StyledNotificationBody>
+    
+    </StyledCard>
+  );
 }
 
 export default NotificationCard;
