@@ -1,7 +1,7 @@
 # Frontend Mentor Challenge - Notifications page
 
 ## live site url
-  https://ali-khaled-13.github.io/Notification-Page/
+  https://ali-khaled-13.github.io/Notifications-Page/
 
 ## The challenge
 

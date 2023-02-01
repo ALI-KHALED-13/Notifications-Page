@@ -21,7 +21,7 @@ const StyledNotificationBody = styled.div`
     display: grid;
     gap: 0.5rem;
     justify-content: space-between;
-    grid-template-columns: ${content.type === "image"? "4fr 1fr": ""};
+    grid-template-columns: ${content.category === "image"? "4fr 1fr": ""};
   `}
 `;
 const StyledRedDot = styled.span`
@@ -60,13 +60,16 @@ const StyledContentLink = styled.a`
 `;
 
 const StyledContentImage = styled(StyledAvatar)`
+  cursor: pointer;
   border-radius: 5px;
+  margin-left: auto;
   &:hover {
     outline: 3px solid var(--lightGreyishBlue1);
   }
 `;
 
 const StyledContentMessage = styled.p`
+  cursor: pointer;
   border: 1px solid var(--lightGreyishBlue1);
   border-radius: 5px;
   padding: 1.5rem;

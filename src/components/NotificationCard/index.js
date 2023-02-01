@@ -19,7 +19,7 @@ const NotificationCard =({notifObject, setOneNotifAsRead})=> {
       "image": StyledContentImage,
       "message": StyledContentMessage
     }
-    const Comp = components[contentConfig.type];
+    const Comp = components[contentConfig.category];
     return <Comp {...contentConfig}/>
   }
 
@@ -57,10 +57,7 @@ const NotificationCard =({notifObject, setOneNotifAsRead})=> {
         </p>
         
         {notifObject.content?.layout === "block" && (
-          // eslint-disable-next-line
-          <a href="#" style={{marginLeft: "auto"}}>
-            {generateContentBlock(notifObject.content)}
-          </a>
+          generateContentBlock(notifObject.content)
         )}
       </StyledNotificationBody>
     

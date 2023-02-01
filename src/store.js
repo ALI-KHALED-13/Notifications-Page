@@ -23,7 +23,7 @@ const notifications = [
     notifMessage: "reacted to your recent post",
     content: {
       layout: "inline",
-      type: "link",
+      category: "link",
       children: "My first tournament today!",
       href: "#"
     }
@@ -51,7 +51,7 @@ const notifications = [
     notifMessage: "has joined your group",
     content: {
       layout: "inline",
-      type: "link",
+      category: "link",
       children: "Chess Club",
       href: "#"
     }
@@ -68,7 +68,7 @@ const notifications = [
     notifMessage: "sent you a private message",
     content: {
       layout: "block",
-      type: "message",
+      category: "message",
       children: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
       href: "#"
     }
@@ -85,8 +85,9 @@ const notifications = [
     notifMessage: "commented on your picture",
     content: {
       layout: "block",
-      type: "image",
-      src: chess
+      category: "image",
+      src: chess,
+      alt: "playing chess"
     }
   },
   {
@@ -101,7 +102,7 @@ const notifications = [
     notifMessage: "reacted to your recent post",
     content: {
       layout: "inline",
-      type: "link",
+      category: "link",
       children: "5 end-game strategies to increase your win rate",
       href: "#"
     }
@@ -118,7 +119,7 @@ const notifications = [
     notifMessage: "left the group",
     content: {
       layout: "inline",
-      type: "link",
+      category: "link",
       children: "Chess Club",
       href: "#"
     }
