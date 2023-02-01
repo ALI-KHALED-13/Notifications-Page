@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Notifications-Page/static/js/main.0d0b42fc.js",
+    "main.js": "/Notifications-Page/static/js/main.6e6d57c4.js",
     "static/media/avatar-rizky-hasanuddin.webp": "/Notifications-Page/static/media/avatar-rizky-hasanuddin.2c9e9a5d4982e8f1b614.webp",
     "static/media/avatar-jacob-thompson.webp": "/Notifications-Page/static/media/avatar-jacob-thompson.ef1880754355ebe956bb.webp",
     "static/media/avatar-nathan-peterson.webp": "/Notifications-Page/static/media/avatar-nathan-peterson.03727540c8ed8341d745.webp",
@@ -10,9 +10,9 @@
     "static/media/avatar-kimberly-smith.webp": "/Notifications-Page/static/media/avatar-kimberly-smith.00520dc2b2f8e585aac5.webp",
     "static/media/avatar-angela-gray.webp": "/Notifications-Page/static/media/avatar-angela-gray.be3397e8fa98e1cac926.webp",
     "index.html": "/Notifications-Page/index.html",
-    "main.0d0b42fc.js.map": "/Notifications-Page/static/js/main.0d0b42fc.js.map"
+    "main.6e6d57c4.js.map": "/Notifications-Page/static/js/main.6e6d57c4.js.map"
   },
   "entrypoints": [
-    "static/js/main.0d0b42fc.js"
+    "static/js/main.6e6d57c4.js"
   ]
 }
