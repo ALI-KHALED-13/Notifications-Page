@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import notifications from "../../store";
 
 import {
@@ -20,11 +20,12 @@ const NotificationsSkeleton =()=>{
       notifs.map(notif=> ({...notif, isRead: true}))
     )
   }
-  const setOneNotifAsRead =(notifID)=> {
+  const setOneNotifAsRead = useCallback((notifID)=> {
     setNotifs(
       notifs.map(notif=> notif.id === notifID? {...notif, isRead: true}: notif)
     )
-  }
+  }, []);
+
   return (
     <StyledContainer>
       

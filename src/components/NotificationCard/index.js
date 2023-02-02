@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
   StyledCard,
   StyledProfileLink,
@@ -12,6 +14,8 @@ import {
 import { convertToPeriod } from './utils';
 
 const NotificationCard =({notifObject, setOneNotifAsRead})=> {
+
+  //console.log(notifObject.initiator.name);
 
   const generateContentBlock =(contentConfig)=> {
     const components = {
@@ -65,4 +69,4 @@ const NotificationCard =({notifObject, setOneNotifAsRead})=> {
   );
 }
 
-export default NotificationCard;
+export default React.memo(NotificationCard);
